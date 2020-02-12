@@ -2,7 +2,7 @@
 #Description-script for generating 18650 battery packs
 
 import adsk.core, adsk.fusion, adsk.cam, traceback
-import math
+import math, random
 
 _app = adsk.core.Application.cast(None)
 _ui = adsk.core.UserInterface.cast(None)
@@ -324,8 +324,14 @@ def drawBatteryPack(cellWidth, cellHeight, cellSpacing, packSCount, packPCount, 
             profs.add(prof)    
         extrude1 = cellsExtrude.addSimple(profs, distance, adsk.fusion.FeatureOperations.NewBodyFeatureOperation )
 
-
-        _ui.messageBox('"Buy me a pint someday" - @ducktaperules')
+        messages = ['"Buy me a pint someday" - @ducktaperules', 
+                    'FFS Akash!!!', 
+                    'You wake up frank now', 
+                    'but think of your wallet', 
+                    'Where that going to fit?', 
+                    'im sure you could fit a few more cells on the end', 
+                    'Why not just buy a KevidDark pack?']
+        _ui.messageBox(random.choice(messages))
 
     except:
         _ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))
