@@ -244,7 +244,7 @@ class BatteryPackCommandValidateInputsHandler(adsk.core.ValidateInputsEventHandl
             
             _errMessage.text = ''
 
-            # # Verify that at lesat 4 teath are specified.
+            # # Verify that at lesat 4 teeth are specified.
             # if not _numTeeth.value.isdigit():
             #     _errMessage.text = 'The number of teeth must be a whole number.'
             #     eventArgs.areInputsValid = False
@@ -280,7 +280,7 @@ def drawBatteryPack(cellWidth, cellHeight, cellSpacing, packSCount, packPCount, 
         sketchCells = sketches.add(xzPlane)
         sketchCells.name = 'Layout'
 
-        #some usefull numbers
+        #some useful numbers
         cellSpacingX = cellSpacing
         cellSpacingY = cellSpacing
         cellOffsetX = 0
@@ -326,11 +326,11 @@ def drawBatteryPack(cellWidth, cellHeight, cellSpacing, packSCount, packPCount, 
 
         messages = ['"Buy me a pint someday" - @ducktaperules', 
                     'FFS Akash!!!', 
-                    'You wake up frank now', 
+                    'You woke up Frank now', 
                     'but think of your wallet', 
-                    'Where that going to fit?', 
-                    'im sure you could fit a few more cells on the end', 
-                    'Why not just buy a KevidDark pack?']
+                    'Where\'s that going to fit?', 
+                    'Im sure you could fit a few more cells on the end', 
+                    'Why not just buy a KevinDark pack?']
         _ui.messageBox(random.choice(messages))
 
     except:
